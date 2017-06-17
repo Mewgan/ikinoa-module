@@ -17,14 +17,21 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <div id="main-menu" class="menuzord">
-                            <a href="#" class="menuzord-brand m10"><img height="70px" src="{{ asset('webzy-by-ikinoa.png') }}" alt="Logo {{ _data.setting.name }} et ikinoa"></a>
-                            <ul class="menuzord-menu m10">
+                            <a href="{{ path('ikinoa.page') }}" class="menuzord-brand m10"><img height="70px" src="{{ asset('webzy-by-ikinoa.png') }}" alt="Logo {{ _data.setting.name }} et ikinoa"></a>
+                            <ul class="menuzord-menu mt10 mb10">
+                                <li>
+                                    <a href="{{ path('ikinoa.page') }}#price-section">Tarif</a>
+                                </li>
+                                <li>
+                                    <a href="{{ path('ikinoa.page.theme') }}">Thèmes</a>
+                                </li>
+                                <li class="pull-right"><a class="btn-round-bg text-white" href="{{ path('ikinoa.page.theme') }}">Créer mon site</a></li>
                                 {% if session._admin_logged_ == true %}
-                                    <li>
+                                    <li class="pull-right">
                                         <a href="{{ path('admin.home') }}">Admin</a>
                                     </li>
                                 {% else %}
-                                    <li>
+                                    <li class="pull-right">
                                         <a href="{{ path('admin.home') }}">Connexion</a>
                                     </li>
                                 {% endif %}
